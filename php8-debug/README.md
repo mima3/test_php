@@ -119,8 +119,9 @@ docker compose exec php85-debug gdb --args php /samples/zval_playground.php
 本当に `zval *` を追いたい場合は `gdb` を使います。PHP スクリプトの変数名をそのまま直接取るのではなく、実行中の Zend Engine 側で受け取っている `zval *` を見る形になります。
 
 
+xdebugを無効にしてデバッガを起動する。(xdebugが有効だとvar_dumpの挙動がxdebugのものになる)
 ```
-gdb --args php zval_playground.php
+gdb --args php -n debug_array.php
 ```
 
 var_dump()の処理でbreakがかかるようにする
@@ -129,6 +130,8 @@ var_dump()の処理でbreakがかかるようにする
 break zif_var_dump
 run
 ```
+
+
 
 ```
 step
