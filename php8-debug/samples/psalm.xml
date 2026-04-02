@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="1"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    findUnusedBaselineEntry="true"
+    findUnusedCode="true"
+>
+    <projectFiles>
+        <file name="sample_fiber.php" />
+        <file name="ffi_sample.php" />
+        <file name="ref_array.php" />
+        <file name="sample.php" />
+        <file name="sample_type2.php" />
+        <file name="sample_type3.php" />
+        <file name="func.php" />
+        <file name="sample_type1.php" />
+        <file name="generator.php" />
+        <file name="ref_object.php" />
+        <file name="debug_array.php" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
+</psalm>

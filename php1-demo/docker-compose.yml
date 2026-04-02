@@ -1,0 +1,13 @@
+services:
+  php1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+    command: >
+      sh -lc 'mkdir -p /var/www/html/logs &&
+              chmod 777 /var/www/html/logs &&
+              apachectl -D FOREGROUND'

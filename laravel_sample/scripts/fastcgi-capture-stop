@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+
+docker compose exec -T app fastcgi-capture-stop

@@ -1,0 +1,25 @@
+{
+    "name": "itagakimasaki/php8-debug-samples",
+    "description": "Standalone samples for the PHP 8.5 debug container",
+    "type": "project",
+    "require": {},
+    "require-dev": {
+        "mockery/mockery": "^1.6",
+        "phpstan/phpstan": "^2.1",
+        "vimeo/psalm": "^6.11",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Samples\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse",
+        "psalm": "psalm"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

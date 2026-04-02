@@ -1,0 +1,12 @@
+services:
+  php85-debug:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php85_debug_build
+    tty: true
+    stdin_open: true
+    working_dir: /samples
+    volumes:
+      - ./php-8.5.4:/usr/src/php-src
+      - ./samples:/samples
